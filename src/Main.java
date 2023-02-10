@@ -6,7 +6,7 @@ public class Main {
     SumPositiveNumber();
     SumPositiveAndNegativeNumber();
     MinMaxNumbers();
-
+    Programmer();
     }
 
     static void Numbers() {
@@ -140,7 +140,27 @@ public class Main {
         System.out.println();
 
     }
-
-
-
+    static void Programmer()
+        // (Дополнительно) В переменную записываете количество программистов. В
+    //зависимости от количества программистов необходимо вывести правильно
+    //окончание. Например:
+    //• 2 программиста
+    //• 1 программиста
+    //• 10 программистов
+    //• и т.д
+    {
+        int programmer = 35;
+        if (programmer==1)
+        {System.out.println("У нас один программист");}
+        else if (programmer > 1 && programmer <= 5)
+        {System.out.printf("У нас %d программиста", programmer);}
+        else if (programmer >5 && programmer <=20 )
+        {System.out.printf("У нас %d программистов", programmer);}
+        else if (programmer == 21 )
+        {System.out.printf("У нас %d программист", programmer);}
+        else if (programmer >21 && programmer <=30 )
+        {System.out.printf("У нас %d программиста", programmer);}
+        else if (programmer >31 )
+        {System.out.print("Столько программистов вместе не собираються =)");}
+    }
 }
