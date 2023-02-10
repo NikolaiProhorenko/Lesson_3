@@ -161,6 +161,6 @@ public class Main {
         else if (programmer >21 && programmer <=30 )
         {System.out.printf("У нас %d программиста", programmer);}
         else if (programmer >31 )
-        {System.out.print("Столько программистов вместе не собираються =)");}
+        {System.out.print("Столько программистов вместе не собираються =) ");}
     }
 }
