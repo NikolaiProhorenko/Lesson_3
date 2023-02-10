@@ -5,7 +5,7 @@ public class Main {
     GetNumbers();
     SumPositiveNumber();
     SumPositiveAndNegativeNumber();
-    MinMaxNumbers();
+    MaxNumbers();
     Programmer();
     }
 
@@ -126,17 +126,13 @@ public class Main {
         System.out.println("Sum our negative numbers: " + sumNegative);
         System.out.println();
     }
-    static void MinMaxNumbers()
+    static void MaxNumbers()
     {
     //Даны 2 числа. Вывести большее из них.
         int number1 = 555;
         int number2 = 85;
 
-        if (number1 > number2) {
-            System.out.println("Biggest number first: " + number1);
-        } else if (number1 < number2) {
-            System.out.println("Biggest number second: " + number2);
-        }
+        System.out.println("Biggest number is: " +((number1 > number2) ? number1: number2));
         System.out.println();
 
     }
