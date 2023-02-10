@@ -134,7 +134,6 @@ public class Main {
 
         System.out.println("Biggest number is: " +((number1 > number2) ? number1: number2));
         System.out.println();
-
     }
     static void Programmer()
         // (Дополнительно) В переменную записываете количество программистов. В
