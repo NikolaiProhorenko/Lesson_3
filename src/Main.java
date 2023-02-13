@@ -40,11 +40,11 @@ public class Main {
         //окажется больше суммы двух других, то треугольника с такими сторонами не
         //существует.
 
-        int a=22;
-        int b=5;
-        int c=5;
+        int a=5;
+        int b=6;
+        int c=11;
 
-        if ((a+b>c) && (a+c>b) && (b+c>a))
+        if ((a+b>=c) && (a+c>=b) && (b+c>=a))
             System.out.printf("Our triangle a=%d, b=%d, c=%d may live\n",a,b,c);
         else
             System.out.printf("Our triangle a=%d, b=%d, c=%d can't live\n",a,b,c);
