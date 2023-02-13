@@ -2,11 +2,11 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-    Numbers();
-  //RamdommNumber();
+    numbers();
+    deliteNumber();
     }
 
-    static void Numbers() {
+    static void numbers() {
 
         //Создайте массив целых чисел. Напишете программу, которая выводит
         //сообщение о том, входит ли заданное число в массив или нет. Пусть
@@ -28,22 +28,50 @@ public class Main {
             System.out.println("Число входит в массив");}
         else {
             System.out.println("Число не входит в массив");
+            MyNumber.close();
         }
-        MyNumber.close();
     }
 
-     public void RamdommNumber()
-    //Создайте и заполните массив случайным числами и выведете
-    //          максимальное, минимальное и среднее значение.
-    //          Для генерации случайного числа используйте метод Math.random().
-    //          Пусть будет возможность создавать массив произвольного
-    //          размера. Пусть размер массива вводится с консоли.
+      static void deliteNumber() {
+         //Создайте и заполните массив случайным числами и выведете
+         //          максимальное, минимальное и среднее значение.
+         //          Для генерации случайного числа используйте метод Math.random().
+         //          Пусть будет возможность создавать массив произвольного
+         //          размера. Пусть размер массива вводится с консоли.
 
-    {
-   //    System.out.print("Enter number");
-  //     Scanner number = new Scanner(System.in);
-  //      int[]  number = new int[];
+         Scanner numbers = new Scanner(System.in);
+         System.out.print("Введите размер массива :");
+         int base = numbers.nextInt();
+         int[] array = new int[base];
 
-    }
+         System.out.println("Введите элементы цикла :");
+         for (int a = 0; a < base; a++)
+         {
+             array[a] = numbers.nextInt();
+         }
+         System.out.print("Введите элемент который хотите удалить :");
+         int deliteNumber = numbers.nextInt();
+         int newBase = 0;
+         for (int a = 0; a < base; a++)
+         {
+             if (array[a] != deliteNumber)
+             {
+                 array[newBase++] = array[a];
+             }
+         }
+         if (newBase == 0)
+         {
+             System.out.print("Массив не пустой");
+         } else
+         {
+             System.out.print("Массив без числа равен :");
+             for (int a = 0; a < newBase; a++)
+             {
+                 System.out.print(array[a] + " ");
+                 numbers.close();
+             }
+         }
+
+     }
 
 }
