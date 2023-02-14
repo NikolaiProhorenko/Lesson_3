@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -6,6 +7,7 @@ public class Main {
     numbers();
     deliteNumber();
     getRandomerNumer();
+    minMaxArray();
     }
 
     static void numbers() {
@@ -15,7 +17,7 @@ public class Main {
         //число для поиска задается с консоли (класс Scanner)
         Scanner MyNumber = new Scanner(System.in);
 
-           System.out.print("Enter number: ");
+        System.out.print("Enter number: ");
         int[] number = new int[] {1,3,5,7,9};
         int Number = MyNumber.nextInt();
         int index =0;
@@ -114,18 +116,47 @@ public class Main {
                      average+= ar[a];
                      double Average = (double) average/base;
                          System.out.println("Average numbers is: " + Average);}
+                     System.out.println();
                         numbe.close();
                      }
                  }
-
-
-
-
              }
+    }
+    static void minMaxArray(){
+        //Создайте 2 массива из 5 чисел.
+        //Выведите массивы на консоль в двух отдельных строках.
+        //Посчитайте среднее арифметическое элементов каждого массива и
+        //сообщите, для какого из массивов это значение оказалось больше (либо
+        //сообщите, что их средние арифметические равны).
+
+        System.out.println();
+        System.out.print("Enter our array :");
+
+
+        int[] line1 = {5,12,14,8,};
+        int[] line2 = {22,5,4,9,17};
+        System.out.println();
+        System.out.println("We take array №1 " + Arrays.toString(line1));
+        System.out.println("We take array №2 "+ Arrays.toString(line2));
+            int arrays1 = 0 ;
+            int arrays2 = 0 ;
+            for (int a = 0; a < line1.length; a++)
+            {
+                arrays1 = line1[a];
+                arrays2 = line2[a];
+            }
+        arrays1 /= line1.length;
+        arrays2 /= line2.length;
+            if (arrays1 == arrays2)
+            {
+            System.out.println("Array №1 = Array №2");}
+        else if
+            (arrays1 > arrays2)
+        { System.out.println("Array №1 > Array №2");}
+        else if
+            (arrays1 < arrays2)
+        {System.out.println("Array №1 < Array №2");}
+
+        }
 
     }
-
-
-
-
-}
