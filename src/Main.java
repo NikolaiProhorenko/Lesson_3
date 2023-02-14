@@ -1,37 +1,45 @@
 public class Main {
     public static void main(String[] args) {
-    Numbers();
-    OurTriangle();
-    GetNumbers();
-    SumPositiveNumber();
-    SumPositiveAndNegativeNumber();
-    MaxNumbers();
-    Programmer();
+    numbers();
+    ourTriangle();
+    getNumbers();
+    sumPositiveNumber();
+    sumPositiveAndNegativeNumber();
+    maxNumbers();
+    programmer();
     }
 
-    static void Numbers() {
+    static void numbers() {
 
         // задача №1 В переменную записываем число. Надо вывести на экран сколько в этом числе цифр
-    // и положительное оно или отрицательное. Например, "это однозначное положительное число".
-    // Достаточно будет определить, является ли число однозначным, "двухзначным или трехзначным и более.
-    int number =15;
+        // и положительное оно или отрицательное. Например, "это однозначное положительное число".
+        // Достаточно будет определить, является ли число однозначным, "двухзначным или трехзначным и более.
+        int number = 415;
 
-        if (number <= 0)
-            System.out.println("Number negative our number: " + number);
+        if (number == 0)
+            System.out.println("Our number: 0 " + number);
 
-        if (number>=0 && number<=9)
+        else if  (number<=-9 && number<0)
+            System.out.println("Number negative, unambiguous our number:: " + number);
+
+        else if (number<=-99 && number<=-10)
+            System.out.println("Number negative, two-digit our number:: " + number);
+
+        else if (number<=-999 && number<=-100)
+            System.out.println("Number negative, three-digit our number:: " + number);
+
+        else if (number>=0 && number<=9)
             System.out.println("Number unambiguous our number:: " + number);
-        else
 
-        if (number>=10 && number<=100)
+        else if (number>=10 && number<=100)
             System.out.println("Number two-digit our number: " + number);
 
         else if (number>=100 && number<=999)
-            System.out.println("ЧNumber three-digit our number: " + number);
+            System.out.println("Number three-digit our number: " + number);
         System.out.println();
     }
 
-    static void OurTriangle()
+    static void ourTriangle()
     {
         //Треугольник существует только тогда, когда сумма любых двух его сторон
         //больше третьей. Определить существует ли такой треугольник. Дано: a, b, c –
@@ -51,12 +59,12 @@ public class Main {
         System.out.println();
     }
 
-    static void GetNumbers()
+    static void getNumbers()
     {
         //Дано целое число. Если оно является положительным, то прибавить к нему 1.
         //Если отрицательным, то вычесть из него 2. Если нулевым, то заменить его на 10. Вывести полученное число.
 
-            int number = 0;
+            int number = 5;
             if (number > 0) {
                 number++;
                 System.out.println("Get number: " + number);
@@ -71,7 +79,7 @@ public class Main {
 
 
     }
-    static void SumPositiveNumber()
+    static void sumPositiveNumber()
     //Даны 3 целые числа. Найти количество положительных чисел в исходном наборе.
     {
         int number1 = 5;
@@ -95,7 +103,7 @@ public class Main {
 
     }
 
-    static void SumPositiveAndNegativeNumber()
+    static void sumPositiveAndNegativeNumber()
     //Даны 3 целых числа. Найти количество положительных и отрицательных
     //чисел в исходном наборе.
     {
@@ -126,7 +134,7 @@ public class Main {
         System.out.println("Sum our negative numbers: " + sumNegative);
         System.out.println();
     }
-    static void MaxNumbers()
+    static void maxNumbers()
     {
     //Даны 2 числа. Вывести большее из них.
         int number1 = 555;
@@ -135,7 +143,7 @@ public class Main {
         System.out.println("Biggest number is: " +((number1 > number2) ? number1: number2));
         System.out.println();
     }
-    static void Programmer()
+    static void programmer()
         // (Дополнительно) В переменную записываете количество программистов. В
     //зависимости от количества программистов необходимо вывести правильно
     //окончание. Например:
@@ -144,7 +152,7 @@ public class Main {
     //• 10 программистов
     //• и т.д
     {
-        int programmer = 35;
+        int programmer = 11;
         if (programmer==1)
         {System.out.println("У нас один программист");}
         else if (programmer > 1 && programmer <= 5)
