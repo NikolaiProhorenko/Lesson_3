@@ -18,7 +18,7 @@ public class Main {
            System.out.print("Enter number: ");
         int[] number = new int[] {1,3,5,7,9};
         int Number = MyNumber.nextInt();
-        int index = 0;
+        int index =0;
         int ArrayElement;
         int place=0;
 
@@ -30,7 +30,7 @@ public class Main {
             System.out.println("Число входит в массив");}
         else {
             System.out.println("Число не входит в массив");
-            MyNumber.close();
+     //       MyNumber.close();
         }
     }
 
@@ -66,12 +66,13 @@ public class Main {
              System.out.println("Массив пустой");
          } else
          {
-             System.out.println("Массив без числа равен :");
+             System.out.print("Массив без числа равен :");
              for (int a = 0; a < newBase; a++)
              {
                  System.out.print(array[a] + " ");
-                 numbers.close();
              }
+           //  numbers.close();
+
          }
 
      }
@@ -86,15 +87,17 @@ public class Main {
 
          System.out.println();
          System.out.println("Print numbers array :");
-         Scanner numbers = new  Scanner (System.in);
-         int base = numbers.nextInt();
+         Scanner numbe = new  Scanner (System.in);
+         int base = numbe.nextInt();
          Random newNumbers = new Random();
          {
          int[] ar = new int[base];
          for (int a = 0; a < base; a++)
              {
                  ar [a] = newNumbers.nextInt(10);
-                 System.out.println(" "+ ar[a]);
+                 System.out.println();
+                 System.out.println("Our number "+ ar[a]);
+
                  {
                      int min = ar[a];
                      {
@@ -111,7 +114,7 @@ public class Main {
                      average+= ar[a];
                      double Average = (double) average/base;
                          System.out.println("Average numbers is: " + Average);}
-                        numbers.close();
+                        numbe.close();
                      }
                  }
 
