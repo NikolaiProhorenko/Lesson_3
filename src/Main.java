@@ -1,9 +1,11 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
     numbers();
     deliteNumber();
+    getRandomerNumer();
     }
 
     static void numbers() {
@@ -33,18 +35,18 @@ public class Main {
     }
 
       static void deliteNumber() {
-         //Создайте и заполните массив случайным числами и выведете
-         //          максимальное, минимальное и среднее значение.
-         //          Для генерации случайного числа используйте метод Math.random().
-         //          Пусть будет возможность создавать массив произвольного
-         //          размера. Пусть размер массива вводится с консоли.
+         //Создайте массив целых чисел. Удалите все вхождения
+          // заданного числа из массива.
+          //Пусть число задается с консоли (класс Scanner). Если такого числа нет
+          //- выведите сообщения об этом.
+          //В результате должен быть новый массив без указанного числа.
 
          Scanner numbers = new Scanner(System.in);
          System.out.print("Введите размер массива :");
          int base = numbers.nextInt();
          int[] array = new int[base];
 
-         System.out.println("Введите элементы цикла :");
+         System.out.println("Введите элементы массива :");
          for (int a = 0; a < base; a++)
          {
              array[a] = numbers.nextInt();
@@ -61,10 +63,10 @@ public class Main {
          }
          if (newBase == 0)
          {
-             System.out.print("Массив не пустой");
+             System.out.println("Массив пустой");
          } else
          {
-             System.out.print("Массив без числа равен :");
+             System.out.println("Массив без числа равен :");
              for (int a = 0; a < newBase; a++)
              {
                  System.out.print(array[a] + " ");
@@ -73,5 +75,54 @@ public class Main {
          }
 
      }
+
+     static void getRandomerNumer() {
+     //Cоздайте и заполните массив случайным числами и выведете
+     //максимальное, минимальное и среднее значение.
+     //Для генерации случайного числа используйте метод Math.random().
+     //Пусть будет возможность создавать массив произвольного
+     //размера. Пусть размер массива вводится с консоли.
+
+
+         System.out.println();
+         System.out.println("Print numbers array :");
+         Scanner numbers = new  Scanner (System.in);
+         int base = numbers.nextInt();
+         Random newNumbers = new Random();
+         {
+         int[] ar = new int[base];
+         for (int a = 0; a < base; a++)
+             {
+                 ar [a] = newNumbers.nextInt(10);
+                 System.out.println(" "+ ar[a]);
+                 {
+                     int min = ar[a];
+                     {
+                     min = Math.min(min, ar[a]);
+                     System.out.println("Min array number is: " + min);}
+
+                     int max = ar[a];
+                     {
+                     max = Math.max(max, ar[a]);
+                     System.out.println("Max array number is: " + max);}
+
+                     int average = 0;
+                     {
+                     average+= ar[a];
+                     double Average = (double) average/base;
+                         System.out.println("Average numbers is: " + Average);}
+                        numbers.close();
+                     }
+                 }
+
+
+
+
+             }
+
+    }
+
+
+
 
 }
