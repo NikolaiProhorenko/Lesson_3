@@ -32,8 +32,9 @@ public class Main {
             System.out.println("Число входит в массив");}
         else {
             System.out.println("Число не входит в массив");
-     //       MyNumber.close();
+     //      MyNumber.close();
         }
+
     }
 
       static void deliteNumber() {
@@ -121,6 +122,7 @@ public class Main {
                      }
                  }
              }
+
     }
     static void minMaxArray(){
         //Создайте 2 массива из 5 чисел.
