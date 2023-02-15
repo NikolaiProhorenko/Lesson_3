@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-    numbers();
-    deliteNumber();
+    //numbers();
+    //deliteNumber();
     getRandomerNumer();
-    minMaxArray();
+   // minMaxArray();
     }
 
     static void numbers() {
@@ -20,11 +20,10 @@ public class Main {
         System.out.print("Enter number: ");
         int[] number = new int[] {1,3,5,7,9};
         int Number = MyNumber.nextInt();
-        int index =0;
         int ArrayElement;
         int place=0;
 
-        for (index = 0; index < number.length; index++) {
+        for (int index = 0; index < number.length; index++) {
             ArrayElement = number[index];
             if (ArrayElement == Number)
                 place++;}
@@ -87,10 +86,10 @@ public class Main {
      //Пусть будет возможность создавать массив произвольного
      //размера. Пусть размер массива вводится с консоли.
 
-
+         Scanner numbe = new Scanner (System.in);
          System.out.println();
          System.out.println("Print numbers array :");
-         Scanner numbe = new  Scanner (System.in);
+
          int base = numbe.nextInt();
          Random newNumbers = new Random();
          {
@@ -114,8 +113,8 @@ public class Main {
 
                      int average = 0;
                      {
-                     average+= ar[a];
-                     double Average = (double) average/base;
+                     average += ar[a];
+                     double Average = (double) average / base;
                          System.out.println("Average numbers is: " + Average);}
                      System.out.println();
                         numbe.close();
@@ -133,7 +132,6 @@ public class Main {
 
         System.out.println();
         System.out.print("Enter our array :");
-
 
         int[] line1 = {5,12,14,8,};
         int[] line2 = {22,5,4,9,17};
