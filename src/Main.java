@@ -3,10 +3,11 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        arrayPlus ();
-        shessBoard();
-    }
+      //  arrayPlus ();
+       // shessBoard();
+        arraySum ();
 
+    }
     static void arrayPlus () {
         //Создать двухмерный массив из целых чисел.
         //С помощью циклов "пройти" по всему массиву и увеличить каждый
@@ -50,4 +51,22 @@ public class Main {
         System.out.println(Arrays.deepToString(shess));
     }
 
+    static void arraySum () {
+        //Создайте двумерный массив целых чисел. Выведите на консоль сумму
+        //всех элементов массива.
+        int[][] myArray = {
+                {1, 2, 3},
+                {7, 8, 9}};
+        Scanner scanner = new Scanner(System.in);
+        int x = myArray.length;
+        int sum = 0;
+        scanner.close();
+
+        for (int a = 0; a < x; a++) {
+            for (int b = 0; b < x; b++)
+                sum += myArray[a][b];
+            System.out.println(sum);
+            System.out.println();
+        }
+    }
 }
