@@ -1,11 +1,13 @@
+import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-      //  arrayPlus ();
-       // shessBoard();
-        arraySum ();
+     arrayPlus ();
+     shessBoard();
+     arraySum ();
+     sort ();
 
     }
     static void arrayPlus () {
@@ -28,7 +30,7 @@ public class Main {
 
             for (int a = 0; a < symbol.length; a++)
                 { for (int b =0; b < symbol.length; b++)
-                    System.out.println(symbol [a][b] + "");
+                    System.out.print(symbol [a][b] + " ");
                     System.out.println();
             }
     }
@@ -48,25 +50,43 @@ public class Main {
                 num = (num == 0) ? ++num : --num;
             }
         }
+        System.out.println();
         System.out.println(Arrays.deepToString(shess));
+        System.out.println();
     }
 
     static void arraySum () {
         //Создайте двумерный массив целых чисел. Выведите на консоль сумму
         //всех элементов массива.
         int[][] myArray = {
-                {1, 2, 3},
+                {1, 2, 3,55},
                 {7, 8, 9}};
         Scanner scanner = new Scanner(System.in);
-        int x = myArray.length;
         int sum = 0;
         scanner.close();
 
-        for (int a = 0; a < x; a++) {
-            for (int b = 0; b < x; b++)
+        for (int a = 0; a < myArray.length; a++) {
+            for (int b = 0; b < myArray[a].length; b++)
                 sum += myArray[a][b];
-            System.out.println(sum);
+
+            System.out.print("We take your arrays : " + sum);
             System.out.println();
+
+        }
+    }
+
+
+    static void sort () {
+        // Создайте двумерный массив целых чисел. Отсортируйте элементы в
+        // строках двумерного массива по возрастанию
+
+        int [][] mySort = {
+                {1,8,9,25,88,54},
+                {22,4,89,128,-4,5,-9}};
+        System.out.println();
+        for (int[] a : mySort ) {
+            Arrays.sort(a);
+            System.out.println("We take :" + Arrays.toString(a));
         }
     }
 }
